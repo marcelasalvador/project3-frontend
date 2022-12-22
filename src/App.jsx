@@ -6,10 +6,14 @@ import Navbar from './components/Navbar'
 import HomePage from './pages/HomePage'
 import LoginPage from './pages/LoginPage'
 import SignupPage from './pages/SignupPage'
-import Vaccines from './pages/Vaccines'
+import Dashboard from './pages/Dashboard'
+import ProfilePage from './pages/ProfilePage'
+import DeleteAccount from './pages/DeleteAccount'
+import UpdateUserInfo from './pages/UpdateUserInfo'
 
-// import IsPrivate from './components/IsPrivate'
+import IsPrivate from './components/IsPrivate'
 import IsAnon from './components/IsAnon'
+
 
 function App() {
 
@@ -23,7 +27,10 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/login" element={<IsAnon><LoginPage /></IsAnon>} />
         <Route path="/signup" element={<IsAnon><SignupPage /></IsAnon>} />
-        <Route path="/vaccines" element={<Vaccines />} />
+        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/profile" element={<IsPrivate><ProfilePage/></IsPrivate>} />
+        <Route path="/update" element={<UpdateUserInfo />} />
+        <Route path="/delete-account" element={<DeleteAccount />} />
         
       </Routes>
     </div>

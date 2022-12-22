@@ -1,7 +1,7 @@
 // src/pages/SignupPage.js
 
-import { useState, useContext } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useState, useEffect, useContext } from "react";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
 import { AuthContext } from "../context/auth.context";
 
@@ -9,20 +9,23 @@ import { AuthContext } from "../context/auth.context";
 function LoginPage(props) {
 
   const {storeToken, authenticateUser} = useContext(AuthContext)
-
+  const {userId} = useParams()
   const navigate = useNavigate();
 
+  const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [errorMessage, setErrorMessage] = useState(undefined);
 
+  // const handleName = (e) => setName(e.target.value);
   const handleEmail = (e) => setEmail(e.target.value);
   const handlePassword = (e) => setPassword(e.target.value);
 
   
   const handleLoginSubmit = (e) => {
     e.preventDefault()
-    axios.post(`${import.meta.env.VITE_BACKEND_URL}auth/login`, {
+    axios.post(`${import.meta.env.VITE_BACKEND_URL}/auth/login`, {
+        name,
         email,
         password
     })
@@ -34,9 +37,13 @@ function LoginPage(props) {
     .catch(err => console.log(err))
   };
 
+  // useEffect(() => {
+  //   handleLoginSubmit()
+  // },[userId])
+
   
   return (
-    <div className="SignupPage">
+    <div className="LoginPage">
       <h1>Login</h1>
 
       <form onSubmit={handleLoginSubmit}>
