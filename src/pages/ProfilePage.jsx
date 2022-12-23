@@ -31,18 +31,22 @@ function ProfilePage() {
     }
 
     return (
-        <main className="profile page">
-            <h1>PROFILE PAGE</h1>
-            <div className="ProfileCard card">
+        <main >
+            <h2>PROFILE PAGE</h2>
+            <div >
                     {user ? (
                         <div>
                             <h3>User Information</h3>
                             <h4>Name:{user.name}</h4>
                             <h4>Email:{user.email}</h4>
+                            <div>
                             <Link to={"/update"}> Update Email or Password</Link>
-                            <button onClick={deleteUser}>Delete Account</button>
+                            
                             <Link to={"/dashboard"}> My Dashboard</Link>
+                            <button onClick={deleteUser}>Delete Account</button>
+                            </div>
                         </div>
+                        
                     ) : <p>loading ...</p>}
                         
                         

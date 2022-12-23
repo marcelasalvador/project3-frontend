@@ -1,6 +1,6 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react'
-import { Card, CardContent } from "@mui/material"
+
 
 
 function Table(props) {
@@ -21,8 +21,10 @@ function Table(props) {
     const tnTableData = data.filter(item => item.province === 'Tennessee');
   
     return (
+   <div className="container-xs d-flex align-items-center overflow-auto w-25 h-50">
+
    
-    <table>
+    <table className="table table-sm table-striped">
       <thead>
         <tr>
           <th>County</th>
@@ -43,6 +45,7 @@ function Table(props) {
         ))}
       </tbody>
     </table>
+    </div>
   );
 };
 

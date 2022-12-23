@@ -7,14 +7,19 @@ function Navbar() {
   const { isLoggedIn, user, logOutUser } = useContext(AuthContext);
 
   return (
-    <nav>
+    
+      
    
-      {isLoggedIn && (
-        <span>Welcome, {user.name}</span>
-      )}
+    
+    <nav className="d-flex flex-column">
+
+      {/* <span><h3>Covid-19 Tracker</h3></span> */}
+      
+     
 
       <Link to="/">
-        <button>Home</button>
+      
+      <button>Home</button>
       </Link>
 
       {!isLoggedIn && (
@@ -35,8 +40,13 @@ function Navbar() {
           <button onClick={logOutUser}>Logout</button>
         </>
       )}
+
+      {isLoggedIn && (
+        <p>Welcome, {user.name}</p>
+      )}
       
     </nav>
+     
   )
   
 }

@@ -32,11 +32,11 @@ useEffect(() =>{
   
     return (
 
-<div className="app__stats">
-            <h1>Shelby</h1>
-            <InfoBox title="Confirmed" cases={confirmedShelby}/>
-            <InfoBox title="Deaths" cases={deathsShelby}/>
-            <InfoBox title="Last Update" cases={updatedAtShelby}/>
+      <div className="app__stats border-primary" >
+            <h2 className="card-body">Shelby</h2>
+            <InfoBox className="card-text" title="Confirmed" cases={confirmedShelby}/>
+            <InfoBox className="card-text" title="Deaths" cases={deathsShelby}/>
+            <InfoBox className="card-text" title="Last Update" cases={updatedAtShelby}/>
         </div>
        
 

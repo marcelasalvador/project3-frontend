@@ -43,13 +43,13 @@ const UpdateUserInfo = (props) => {
 
   return (
     <div>
-      <h1>Update Project Form</h1>
+      <h1>Update User Form</h1>
       <form onSubmit={submitFormHandler}>
         <label>Name</label>
         <input onChange={updateState} value={state.name} name="name" />
         <label>Email</label>
         <input onChange={updateState} value={state.email} name="email" />
-        <button>Update Project</button>
+        <button>Update User</button>
       </form>
     </div>
   );
