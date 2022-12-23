@@ -1,6 +1,6 @@
 
 import ShelbyCountyStats from './ShelbyCountyStats';
-import Table from "../components/Table"
+import TableComponent from './Table';
 import TNStats from '../components/TNStats';
 // import TNMap from "./TNMap"
 import FlourishMap from '../components/Flourish';
@@ -31,7 +31,7 @@ const { tnTableData } = props;
         
         {/* <TNMap tnTableData={tnTableData}/> */}
       </div> 
-        <Table className="table table-sm table-striped"/>
+        <TableComponent/>
   </div>
   )
 }

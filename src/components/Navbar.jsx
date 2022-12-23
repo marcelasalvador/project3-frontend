@@ -11,7 +11,7 @@ function Navbar() {
       
    
     
-    <nav className="d-flex flex-column">
+    <nav >
 
       {/* <span><h3>Covid-19 Tracker</h3></span> */}
       
@@ -37,7 +37,9 @@ function Navbar() {
           <Link to="/profile"> 
           <button>Profile</button> 
           </Link>
+          
           <button onClick={logOutUser}>Logout</button>
+          <br/>
         </>
       )}
 

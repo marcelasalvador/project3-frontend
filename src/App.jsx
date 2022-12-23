@@ -20,8 +20,9 @@ function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <div className="App">
+    <div>
       <Navbar />
+      <div>
 
       <Routes>
         <Route path="/" element={<HomePage />} />
@@ -32,6 +33,7 @@ function App() {
         <Route path="/update" element={<IsPrivate><UpdateUserInfo/></IsPrivate>} />
         {/* <Route path="/delete-account" element={<DeleteAccount />} /> */}
       </Routes>
+      </div>
     </div>
 
   )

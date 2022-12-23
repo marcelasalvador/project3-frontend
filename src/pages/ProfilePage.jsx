@@ -31,18 +31,22 @@ function ProfilePage() {
     }
 
     return (
-        <main >
-            <h2>PROFILE PAGE</h2>
-            <div >
+        <main className="container-fluid">
+            {/* <h2>PROFILE PAGE</h2> */}
+            <div className="row">
                     {user ? (
-                        <div>
+                        <div className="col-12">
                             <h3>User Information</h3>
-                            <h4>Name:{user.name}</h4>
-                            <h4>Email:{user.email}</h4>
+                           
+                            <h4>Name:   {user.name}</h4>
+                            <h4>Email:   {user.email}</h4>
                             <div>
                             <Link to={"/update"}> Update Email or Password</Link>
-                            
-                            <Link to={"/dashboard"}> My Dashboard</Link>
+                            <br/>
+                            <br/>
+                            <Link to={"/dashboard"}> Dashboard</Link>
+                            <br/>
+                            <br/>
                             <button onClick={deleteUser}>Delete Account</button>
                             </div>
                         </div>

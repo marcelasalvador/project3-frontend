@@ -48,20 +48,23 @@ function LoginPage(props) {
 
       <form onSubmit={handleLoginSubmit}>
         <label>Email:</label>
+        <br/>
         <input 
           type="email"
           name="email"
           value={email}
           onChange={handleEmail}
         />
-
+        <br/>
         <label>Password:</label>
+        <br/>
         <input 
           type="password"
           name="password"
           value={password}
           onChange={handlePassword}
         />
+        <br/>
 
 
         <button type="submit">Login</button>

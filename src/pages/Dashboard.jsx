@@ -9,9 +9,9 @@ function Dashboard() {
   return (
     <div>
       
-      <div className="app">
-        <div className="app__left">
-          <div className="app__header">
+      <div >
+        <div >
+          <div>
             <h1>901 COVID-19 Tracker</h1>
           </div>
           <div>
