@@ -7,7 +7,7 @@ body {
 
 .jumbotron {
   position: relative;
-  background: url("public/images/home page pic.jpg");
+  background: url("/images/home page pic.jpg");
   background-position: center center;
   background-size: cover;
   height: 100vh;

@@ -41,8 +41,8 @@ function HomePage() {
             <button className="button">Login</button>
           </Link>
 
-          <Link to={"/register"}>
-            <button className="button">Register</button>
+          <Link to={"/signup"}>
+            <button className="button">Signup</button>
           </Link>
         </div>
       </div>
