@@ -17,7 +17,6 @@ import IsAnon from './components/IsAnon'
 
 function App() {
 
-  const [count, setCount] = useState(0)
 
   return (
     <div>
