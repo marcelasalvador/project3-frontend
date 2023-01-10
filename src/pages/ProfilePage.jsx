@@ -47,7 +47,7 @@ function ProfilePage() {
                             <Link to={"/dashboard"}> Dashboard</Link>
                             <br/>
                             <br/>
-                            <button onClick={deleteUser}>Delete Account</button>
+                            <button className="buttonForm" onClick={deleteUser}>Delete Account</button>
                             </div>
                         </div>
                         

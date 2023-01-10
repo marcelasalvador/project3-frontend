@@ -49,7 +49,7 @@ const UpdateUserInfo = (props) => {
         <input onChange={updateState} value={state.name} name="name" />
         <label>Email</label>
         <input onChange={updateState} value={state.email} name="email" />
-        <button>Update User</button>
+        <button className="buttonForm">Update User</button>
       </form>
     </div>
   );

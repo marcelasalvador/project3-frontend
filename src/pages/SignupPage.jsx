@@ -36,10 +36,11 @@ function SignupPage(props) {
 
   
   return (
+    <div className="d-flex justify-content-center mt-5">
     <div className="SignupPage">
       <h1>Sign Up</h1>
     
-      <form onSubmit={handleSignupSubmit}>
+      <form className="mt-5" onSubmit={handleSignupSubmit}>
         <label>Name:</label>
           <br />
         <input 
@@ -49,7 +50,7 @@ function SignupPage(props) {
           onChange={handleName}
         />
         <br />
-        <label>Email:</label>
+        <label className="mt-3">Email:</label>
         <br />
         <input 
           type="email"
@@ -58,7 +59,7 @@ function SignupPage(props) {
           onChange={handleEmail}
         />
         <br />
-        <label>Password:</label>
+        <label className="mt-3">Password:</label>
         <br />
         <input 
           type="password"
@@ -68,13 +69,14 @@ function SignupPage(props) {
         />
         <br />
        
-        <button type="submit">Sign Up</button>
+        <button className="buttonForm mt-4 mb-3" type="submit">Sign Up</button>
       </form>
 
       { errorMessage && <p className="error-message">{errorMessage}</p> }
 
       <p>Already have account?</p>
       <Link to={"/login"}> Login</Link>
+    </div>
     </div>
   )
 }

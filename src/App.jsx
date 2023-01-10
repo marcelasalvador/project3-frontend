@@ -2,7 +2,7 @@ import { useState } from 'react'
 import './App.css'
 import { Route, Routes } from "react-router-dom"
 
-import Navbar from './components/Navbar'
+import NavbarArea from './components/NavbarArea'
 import HomePage from './pages/HomePage'
 import LoginPage from './pages/LoginPage'
 import SignupPage from './pages/SignupPage'
@@ -21,7 +21,7 @@ function App() {
 
   return (
     <div>
-      <Navbar />
+      <NavbarArea />
       <div>
 
       <Routes>
