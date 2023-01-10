@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, Link } from "react";
 import { AuthContext } from "../context/auth.context";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
@@ -10,10 +10,13 @@ function NavbarArea() {
 
   return (
     <Navbar bg="light" expand="lg">
+    
       <Container>
         <Navbar.Brand className="mr-auto" href="/">
           Covid-19 Tracker
         </Navbar.Brand>
+       <p></p>
+
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav>
