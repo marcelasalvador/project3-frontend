@@ -20,12 +20,12 @@ function TableComponent(props) {
   return (
 
     
-    <div className="container-fluid h-50">
-    <h2>County Data</h2>
-    <div className="row h-100 align-items-center">
+    <div className="container-fluid text-center vh-50">
+    <h2 className="pb-5">County Data</h2>
+    <div className="row vh-50 align-items-center">
       <div className="col-md-6 offset-md-3">
 
-      <Table striped bordered hover size="sm">
+      <Table className="table" striped bordered hover size="sm" >
         <thead>
           <tr>
             <th>County</th>

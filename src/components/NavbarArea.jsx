@@ -12,7 +12,7 @@ function NavbarArea() {
     <Navbar bg="light" expand="lg">
     
       <Container>
-        <Navbar.Brand className="mr-auto" href="/">
+        <Navbar.Brand className="mr-auto ont-size: larger" href="/">
           Covid-19 Tracker
         </Navbar.Brand>
        <p></p>

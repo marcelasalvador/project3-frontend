@@ -1,30 +1,25 @@
-
-import ShelbyCountyStats from '../components/ShelbyCountyStats';
-import Table from "../components/Table"
-import TNStats from '../components/TNStats';
-// import TNMap from "./TNMap"
-import FlourishMap from '../components/Flourish';
+import ShelbyCountyStats from "../components/ShelbyCountyStats";
+import Table from "../components/Table";
+import TNStats from "../components/TNStats";
 
 function Dashboard() {
   return (
-    <div>
-      
-      <div >
-        <div >
-          <div>
+    <div className="text-center">
+      <div>
+        <div>
+          <div className="p-5">
             <h1>901 COVID-19 Tracker</h1>
           </div>
-          <div>
+          <div className="p-5">
             <ShelbyCountyStats />
+          </div>
+          <div className="p-5">
             <TNStats />
           </div>
-          <div>
-            <FlourishMap />
-          </div>
-
-          {/* <TNMap tnTableData={tnTableData}/> */}
         </div>
-        <Table />
+        <div className="pt-5 vh-50">
+          <Table />
+        </div>
       </div>
     </div>
   );
