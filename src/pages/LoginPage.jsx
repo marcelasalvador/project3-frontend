@@ -38,7 +38,7 @@ function LoginPage(props) {
     <div>
       <Container>
         <Row className="vh-100 d-flex justify-content-center align-items-center">
-          <Col md={8} lg={6} xs={6}>
+          <Col md={8} lg={6} xs={12}>
             <Card className="px-4">
               <Card.Body>
                 <div className="mb-3 mt-md-4">

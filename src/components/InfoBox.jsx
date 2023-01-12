@@ -1,27 +1,21 @@
 import React from "react";
-import { Card, CardContent, Typography } from '@mui/material';
+import Card from "react-bootstrap/Card";
 
 
 const InfoBox = ({ title, cases, total}) => {
     return (
-        <Card className="infoBox">
-            <CardContent>
-                <Typography
-                    className="infoBox__title"
-                    color="textSecondary"
-                    >
-                    {title}
-                </Typography>
-                <h2 className="inforBox__cases">{cases}</h2>
-                <Typography
-                    className="infoBox__total"
-                    color="textSecondary"
-                    >
-                    {total} Total
-                </Typography>
-            </CardContent>
-        </Card>
-    )
-}
+
+<div>
+      <Card >
+        <Card.Body>               
+          <Card.Title >{cases}</Card.Title>
+          <Card.Text>
+            {title}
+          </Card.Text>
+        </Card.Body>
+      </Card>
+    </div>   
+    )     
+}      
 
 export default InfoBox

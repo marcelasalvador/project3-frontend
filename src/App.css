@@ -11,8 +11,6 @@ body {
   
 }
 
-
-
 .jumbotron {
   position: relative;
   background: url("/images/home page pic.png");
@@ -32,13 +30,13 @@ body {
 p {
   font-size: 14px;
 }
+
 .button {
   transition: all 0.2s ease-in-out;
   color: grey;
   background-color: white;
   border-radius: 8px;
   border: 1px solid transparent;
-  
   padding: 0.6em 1.2em;
   font-size: 1em;
   font-weight: 500;
@@ -69,15 +67,4 @@ p {
   background-color: rgb(52, 112, 190);
 }
 
-.card {
-  padding: 2em;
-}
 
-.read-the-docs {
-  color: #888;
-}
-
-
-.table{
-  overflow-y: hidden
-}

@@ -1,5 +1,6 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react'
+import { Col, Button, Row, Container, Card, Form } from "react-bootstrap";
 import InfoBox from './InfoBox';
 
 function TNStats(props) {
@@ -25,20 +26,26 @@ function TNStats(props) {
           }
           return acc;
         }, 0);
-        console.log(totalConfirmedTN)
-        setTotalConfirmedTN(totalConfirmedTN);
+        const formattedConfirmedTN = totalConfirmedTN.toLocaleString();
+        console.log(formattedConfirmedTN);
+        setTotalConfirmedTN(formattedConfirmedTN);
 
+     
         const totalDeathsTN = res.data.reduce((acc, cur) => {
           if (cur.province === 'Tennessee') {
             return acc + cur.stats.deaths;
           }
           return acc;
         }, 0);
-        console.log(totalDeathsTN)
-        setTotalDeathsTN(totalDeathsTN);
+        const formattedTotalDeathsTN = totalDeathsTN.toLocaleString();
+        console.log(formattedTotalDeathsTN);
+        setTotalDeathsTN(formattedTotalDeathsTN);
         
+        
+  
         const dateValueTN = new Date(tnStateData.updatedAt); 
-        setUpdatedDateTN(dateValueTN.toDateString())
+        setUpdatedDateTN(dateValueTN.toLocaleDateString('en-US', {month: 'long', day: 'numeric', year: 'numeric'}))
+
 
         const coordinatesCounty = tnStateData.coordinates
         setCoordinatesCounty(coordinatesCounty)
@@ -63,12 +70,29 @@ function TNStats(props) {
   }, []);
 
     return (
-        <div className="app__stats">
-            <h1>Tennessee</h1>
-            <InfoBox title="Confirmed" cases={totalConfirmedTN}/>
-            <InfoBox title="Deaths" cases={totalDeathsTN}/>
-            <InfoBox title="Last Update" cases={updatedDateTN}/>
+        // <div className="app__stats">
+        //     <h1>Tennessee</h1>
+        //     <InfoBox title="Confirmed" cases={totalConfirmedTN}/>
+        //     <InfoBox title="Deaths" cases={totalDeathsTN}/>
+        //     <InfoBox title="Last Update" cases={updatedDateTN}/>
+        // </div>
+
+         <div >
+      <Container>
+     <Row className="d-flex justify-content-center tex-center">
+     <Col style={{ width: "25rem" }} md={8} lg={6} xs={12}>
+     <div>
+            <h2 className="pb-3">Tennessee</h2>
+            <InfoBox className="card-text" title="Confirmed" cases={totalConfirmedTN}/>
+            <InfoBox className="card-text" title="Deaths" cases={totalDeathsTN}/>
+            <InfoBox className="card-text" title="Last Update" cases={updatedDateTN}/>
+            </div>
+            </Col>
+            </Row>
+            </Container>
         </div>
+
+
 
 
     )

@@ -33,7 +33,7 @@ function SignupPage(props) {
     <div>
       <Container>
         <Row className="vh-100 d-flex justify-content-center align-items-center">
-          <Col md={8} lg={6} xs={12}>
+          <Col md={8} lg={6}  xs={12}>
             <Card className="px-4">
               <Card.Body>
                 <div className="mb-3 mt-md-4">
@@ -95,7 +95,7 @@ function SignupPage(props) {
                       <p className="mb-0  text-center">
                         Already have an account??{" "}
                         <a href={"/login"} className="text-secondary fw-bold">
-                          Sign In
+                         Login
                         </a>
                       </p>
                     </div>

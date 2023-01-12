@@ -4,7 +4,7 @@ import TNStats from "../components/TNStats";
 
 function Dashboard() {
   return (
-    <div className="text-center">
+    <div className="text-center justify-content-center ">
       <div>
         <div>
           <div className="p-5">
@@ -17,7 +17,7 @@ function Dashboard() {
             <TNStats />
           </div>
         </div>
-        <div className="pt-5 vh-50">
+        <div className="pt-5 ">
           <Table />
         </div>
       </div>

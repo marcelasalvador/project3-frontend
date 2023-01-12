@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import Table from 'react-bootstrap/Table';
+import { Col, Row, Container } from "react-bootstrap";
+import Table from "react-bootstrap/Table";
 
 function TableComponent(props) {
   const [data, setData] = useState([]);
@@ -18,40 +19,40 @@ function TableComponent(props) {
   const tnTableData = data.filter((item) => item.province === "Tennessee");
 
   return (
-
-    
-    <div className="container-fluid text-center vh-50">
-    <h2 className="pb-5">County Data</h2>
-    <div className="row vh-50 align-items-center">
-      <div className="col-md-6 offset-md-3">
-
-      <Table className="table" striped bordered hover size="sm" >
-        <thead>
-          <tr>
-            <th>County</th>
-            <th>Confirmed Cases</th>
-            {/* <th>Deaths</th> */}
-          </tr>
-        </thead>
-        <tbody>
-          {tnTableData.map((item) => (
-            <tr key={item.county}>
-              <td>{item.county}</td>
-              <td>
-                <strong>{item.stats.confirmed}</strong>
-              </td>
-              {/* <td>{item.stats.deaths}</td> */}
-              {/* <td>
-                {item.coordinates.latitude}, {item.coordinates.longitude}
-            </td> */}
-            
-            </tr>
-          ))}
-        </tbody>
-      </Table>
-      </div>
-  </div>
-</div>
+    <div >
+      <Container >
+        <Row>
+          <Col className=" col-md-6 offset-md-3 align-items-center">
+            <h2 className="pb-5">County Data</h2>
+            <div>
+            <Table
+        
+              striped
+              bordered
+            >
+              <thead>
+                <tr>
+                  <th>County</th>
+                  <th>Confirmed Cases</th>
+                  {/* <th>Deaths</th> */}
+                </tr>
+              </thead>
+              <tbody>
+                {tnTableData.map((item) => (
+                  <tr key={item.county}>
+                    <td>{item.county}</td>
+                    <td>
+                      {item.stats.confirmed.toLocaleString()}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </Table>
+            </div>
+          </Col>
+        </Row>
+      </Container>
+    </div>
   );
 }
 
