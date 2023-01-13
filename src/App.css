@@ -2,13 +2,10 @@
   box-sizing: border-box;
 }
 
-
 body {
   position: absolute;
   min-height: 100%;
   min-width: 100%;
-
-  
 }
 
 .jumbotron {
@@ -20,7 +17,6 @@ body {
   width: 100vw;
   background-size: cover;
 }
-
 
 .jumbotron > .container {
   position: relative;
@@ -47,9 +43,8 @@ p {
 
 .button:hover {
   color: rgb(57, 56, 56);
-  border-color:rgb(179, 178, 178);
+  border-color: rgb(179, 178, 178);
   transition: border-color 0.25s;
-  
 }
 
 .buttonForm {
@@ -67,4 +62,24 @@ p {
   background-color: rgb(52, 112, 190);
 }
 
+.containerTable {
+  overflow: scroll;
+  max-height: 200px;
 
+  width: 50vw;
+}
+
+.sticky {
+  position: sticky;
+  top: 0;
+  background-color: white;
+}
+
+::-webkit-scrollbar {
+  width: 0.2em;
+  background-color: #f5f5f5;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #000000;
+}

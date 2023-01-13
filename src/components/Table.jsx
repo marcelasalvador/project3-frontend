@@ -1,7 +1,8 @@
+
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { Col, Row, Container } from "react-bootstrap";
-import Table from "react-bootstrap/Table";
+import Table  from "react-bootstrap/Table";
 
 function TableComponent(props) {
   const [data, setData] = useState([]);
@@ -19,21 +20,22 @@ function TableComponent(props) {
   const tnTableData = data.filter((item) => item.province === "Tennessee");
 
   return (
-    <div >
+    <div className="pb-5" bordered>
       <Container >
         <Row>
           <Col className=" col-md-6 offset-md-3 align-items-center">
             <h2 className="pb-5">County Data</h2>
-            <div>
+            <div style={{height: '80vh', overflow: 'scroll'}}>
             <Table
+        
         
               striped
               bordered
             >
-              <thead>
-                <tr>
-                  <th>County</th>
-                  <th>Confirmed Cases</th>
+              <thead className="sticky">
+                <tr >
+                  <th >County</th>
+                  <th >Confirmed Cases</th>
                   {/* <th>Deaths</th> */}
                 </tr>
               </thead>
