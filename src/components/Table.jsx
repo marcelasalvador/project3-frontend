@@ -22,7 +22,7 @@ function TableComponent(props) {
   return (
     <div className="pb-5" bordered>
       <Container >
-        <Row>
+        <Row >
           <Col className=" col-md-6 offset-md-3 align-items-center">
             <h2 className="pb-5">County Data</h2>
             <div style={{height: '80vh', overflow: 'scroll'}}>
