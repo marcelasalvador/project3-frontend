@@ -19,7 +19,7 @@ html {
 }
 .jumbotron {
   position: relative;
-  background: url("images/homePagePic2.jpg"); 
+  background: url("/images/homePagePic2.jpg"); 
   background-position: center center;
   background-size: cover;
   height: 100vh;
