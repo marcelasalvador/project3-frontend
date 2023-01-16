@@ -5,21 +5,19 @@ import Navbar from "react-bootstrap/Navbar";
 import Container from "react-bootstrap/Container";
 
 function NavbarArea() {
-
   const { isLoggedIn, user, logOutUser } = useContext(AuthContext);
 
   return (
-    <Navbar bg="light" expand="lg">
-    
+    <Navbar bg="light" expand="lg" className="fixed-top mb-5">
       <Container>
         <Navbar.Brand className="mr-auto ont-size: larger" href="/">
-          Covid-19 Tracker
+          901 Covid-19 Tracker
         </Navbar.Brand>
-       <p></p>
+        <p></p>
 
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav>
+          <Nav className="d-flex justify-content-center align-items-center">
             {!isLoggedIn && (
               <>
                 <Nav.Link href="/signup">Signup</Nav.Link>
@@ -34,7 +32,11 @@ function NavbarArea() {
                 <Nav.Link onClick={logOutUser}>Logout</Nav.Link>
               </>
             )}
-            {isLoggedIn && <p>Welcome, {user.name}</p>}
+            {isLoggedIn && (
+              <p className=" welcomeMessage fw-bold m-auto p-2">
+                Welcome, {user.name}
+              </p>
+            )}
           </Nav>
         </Navbar.Collapse>
       </Container>

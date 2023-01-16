@@ -1,5 +1,5 @@
 import { useState, useEffect, useContext } from "react";
-import { Link, useNavigate, useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
 import { AuthContext } from "../context/auth.context";
 import { Col, Button, Row, Container, Card, Form } from "react-bootstrap";
@@ -30,7 +30,7 @@ function LoginPage(props) {
       .then(axiosResponse => {
           storeToken(axiosResponse.data.authToken)
           authenticateUser()
-          
+
 
       })
       .catch(err => console.log(err))
@@ -90,7 +90,7 @@ function LoginPage(props) {
                       <p className="mb-0  text-center">
                       Don't have account?{" "}
                         <a href={"/signup"} className="text-secondary fw-bold">
-                          Register
+                          Signup
                         </a>
                       </p>
                     </div>

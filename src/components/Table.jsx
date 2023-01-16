@@ -20,11 +20,11 @@ function TableComponent(props) {
   const tnTableData = data.filter((item) => item.province === "Tennessee");
 
   return (
-    <div className="pb-5" bordered>
+    <div  bordered>
       <Container >
         <Row >
-          <Col className=" col-md-6 offset-md-3 align-items-center">
-            <h2 className="pb-5">County Data</h2>
+          <Col className="  align-items-center">
+            <h2 className="mb-3">County Data</h2>
             <div style={{height: '80vh', overflow: 'scroll'}}>
             <Table
         

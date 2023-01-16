@@ -46,8 +46,8 @@ function ShelbyCountyStats() {
   return (
     <div>
       <Container>
-        <Row className="d-flex justify-content-center tex-center">
-          <Col md={8} lg={6} xs={12}>
+        <Row className="d-flex justify-content-center tex-center mb-5">
+          <Col lg={10} >
             <div>
               <h2 className="pb-3">Shelby</h2>
               <InfoBox
