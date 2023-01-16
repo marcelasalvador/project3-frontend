@@ -1,4 +1,4 @@
-import { useContext, Link } from "react";
+import { useContext } from "react";
 import { AuthContext } from "../context/auth.context";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
@@ -31,7 +31,6 @@ function NavbarArea() {
               <>
                 <Nav.Link href="/dashboard">Dashboard</Nav.Link>
                 <Nav.Link href="/profile">Profile</Nav.Link>
-                <Nav.Link href="/login">Login</Nav.Link>
                 <Nav.Link onClick={logOutUser}>Logout</Nav.Link>
               </>
             )}

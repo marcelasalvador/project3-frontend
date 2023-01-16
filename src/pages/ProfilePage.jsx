@@ -11,10 +11,7 @@ function ProfilePage() {
     const { user, logOutUser } = useContext(AuthContext)
 
     const deleteUser = () => {
-        //some type of axios request to a backend route to delete the user
-        //make sure to include the token in the headers of the request
-        //inside the .then of your axios request make sure to use
-        //the logOutUser function once the user has been delete
+        
 
         axios.delete(`${import.meta.env.VITE_BACKEND_URL}/auth/delete`, {
             headers:{
@@ -22,7 +19,7 @@ function ProfilePage() {
             }
         })
             .then(() => {
-            //   localStorage.removeItem("authToken");
+           
               logOutUser();
             })
             .catch((err) => {
